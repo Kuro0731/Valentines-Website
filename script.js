@@ -10,14 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (moveRandom) {
         console.log("Found #move-random on", window.location.pathname);
 
-        // Works on desktop (mouse hover)
         moveRandom.addEventListener('mouseenter', function(e) {
             moveRandomEl(e.target);
         });
 
-        // Works on mobile (touch)
         moveRandom.addEventListener('touchstart', function(e) {
-            e.preventDefault();  // Prevent accidental taps
+            e.preventDefault();  
             moveRandomEl(e.target);
         });
     } else {
